@@ -1,0 +1,4 @@
+User: We need a local tool that compares two model responses to the same task.
+Assistant: We should preserve the prompt, model identifiers, outputs, and review notes.
+User: Make publishing a separate, explicit step after human review.
+

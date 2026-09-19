@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transcript-to-github-projects"
+version = "0.2.0"
+description = "Human-reviewed transcript analysis across OpenAI and Ollama providers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE.md"}
+dependencies = [
+  "python-dotenv>=1.0,<2.0",
+  "requests>=2.32,<3.0",
+]
+
+[project.scripts]
+transcript-projects = "app.main:main"
+transcript-projects-gui = "app.ui:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
