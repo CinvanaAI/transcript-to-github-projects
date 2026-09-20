@@ -1,28 +1,50 @@
 {
-  "mode": "Actual coordinator; synthetic provider response",
-  "source": "User: Make a review queue. Require approval before publishing any item.",
-  "request_roles": [
-    "system",
-    "user"
-  ],
-  "captured_response": {
-    "project_title": "Workshop Review Queue",
-    "project_description": "Review proposed work before publication.",
-    "source_summary": "Synthetic planning request.",
-    "items": [
+  "structured_fixture": {
+    "mode": "Actual coordinator; explicitly authored fixture response",
+    "source": "User: Make a review queue. Require approval before publishing any item.",
+    "request_messages": [
       {
-        "type": "Task",
-        "title": "Add a review gate",
-        "body": "Require a person to approve each draft.",
-        "priority": "High",
-        "confidence": "High",
-        "phase": "V1",
-        "needs_review": true
+        "role": "system",
+        "content": "You review software-planning conversations and produce a helpful raw analysis.\n\nDo not assume a fixed schema.\nYou may answer in plain text, markdown, bullets, or JSON if you choose.\nPreserve important goals, tasks, decisions, constraints, and open questions when relevant.\nDo not invent unsupported facts."
+      },
+      {
+        "role": "user",
+        "content": "Review the following conversation transcript.\nReturn your best raw analysis for human review.\nTranscript:\nUser: Make a review queue. Require approval before publishing any item."
       }
-    ]
+    ],
+    "captured_raw_response": "{\"project_title\": \"Workshop Review Queue\", \"project_description\": \"Review proposed work before publication.\", \"source_summary\": \"Synthetic planning request.\", \"items\": [{\"type\": \"Task\", \"title\": \"Add a review gate\", \"body\": \"Require a person to approve each draft.\", \"priority\": \"High\", \"confidence\": \"High\", \"phase\": \"V1\", \"needs_review\": true}]}",
+    "raw_preserved_exactly": true,
+    "schema_validation": {
+      "passed": true,
+      "project_title": "Workshop Review Queue"
+    },
+    "compatibility_status": "supported",
+    "human_approval_performed": false,
+    "published": false,
+    "network_calls": 0
   },
-  "reviewed_project_title": "Workshop Review Queue",
-  "compatibility_status": "supported",
-  "published": false,
-  "network_calls": 0
+  "raw_prose_fixture": {
+    "mode": "Actual coordinator; explicitly authored fixture response",
+    "source": "User: Make a review queue. Require approval before publishing any item.",
+    "request_messages": [
+      {
+        "role": "system",
+        "content": "You review software-planning conversations and produce a helpful raw analysis.\n\nDo not assume a fixed schema.\nYou may answer in plain text, markdown, bullets, or JSON if you choose.\nPreserve important goals, tasks, decisions, constraints, and open questions when relevant.\nDo not invent unsupported facts."
+      },
+      {
+        "role": "user",
+        "content": "Review the following conversation transcript.\nReturn your best raw analysis for human review.\nTranscript:\nUser: Make a review queue. Require approval before publishing any item."
+      }
+    ],
+    "captured_raw_response": "The conversation asks for a review queue with explicit approval before publication.",
+    "raw_preserved_exactly": true,
+    "schema_validation": {
+      "passed": false,
+      "error_type": "JSONDecodeError"
+    },
+    "compatibility_status": "supported",
+    "human_approval_performed": false,
+    "published": false,
+    "network_calls": 0
+  }
 }

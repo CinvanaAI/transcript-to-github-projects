@@ -7,5 +7,5 @@ The public snapshot keeps the reusable application source and removes the
 working `.env`, real transcript inputs, generated model responses, caches, and
 the nested successor evaluator project. Package imports, examples, tests, and
 the OpenAI adapter were refreshed during publication review. The nested
-evaluator is intentionally being prepared as its own repository.
+evaluator is preserved separately as [Transcript Model Evaluator](https://github.com/CinvanaAI/transcript-model-evaluator).
 
